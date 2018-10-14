@@ -11,6 +11,8 @@
 	"rules": {
 		"comma-dangle": ["error", "always-multiline"],
 		"react/jsx-filename-extension": 0,
+		"indent":["error", "tab"],
+		"no-tabs": 0,
 		"no-unused-vars": ["warn", { "vars": "local", "args": "none" }]
 	}
 }
