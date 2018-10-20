@@ -11,7 +11,7 @@ export const ExpensesSummary = (props) => {
 	return (
 		<div>
 			{
-				"You have " + props.expenses.length + " expense" + pluralFixer + " totalling: " + numeral(totalCost).format('$0,0.00')
+				"Viewing " + props.expenses.length + " expense" + pluralFixer + " totalling: " + numeral(totalCost).format('$0,0.00')
 			}
 		</div>
 	);
