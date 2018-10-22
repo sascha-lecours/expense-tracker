@@ -8,11 +8,12 @@ import selectExpensesTotal from '../selectors/expenses-total';
 export const ExpensesSummary = (props) => {
 	const pluralFixer = (props.expenses.length === 1) ? '' : 's';
 	const totalCost = selectExpensesTotal(props.expenses) / 100;
+	const formattedTotalCost = numeral(totalCost).format('$0,0.00');
 	return (
 		<div>
-			{
-				"Viewing " + props.expenses.length + " expense" + pluralFixer + " totalling: " + numeral(totalCost).format('$0,0.00')
-			}
+			<h1>
+				Viewing {props.expenses.length} expense{pluralFixer} totalling: {formattedTotalCost}
+			</h1>
 		</div>
 	);
 };
